@@ -32,9 +32,6 @@ vim.api.nvim_set_keymap('n', '<Left>', '<Nop>', {noremap=true})
 --disable right arrow key
 vim.api.nvim_set_keymap('n', '<Right>', '<Nop>', {noremap=true}) 
 
--- font
-vim.opt.guifont = { "JetBrainsMono-Medium", "h12" }
-
 --universal formatter config
 
 --colors
