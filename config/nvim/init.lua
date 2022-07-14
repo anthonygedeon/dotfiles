@@ -90,17 +90,22 @@ require('gitsigns').setup()
 
 --https://github.com/kyazdani42/nvim-tree.lua
 vim.g.nvim_tree_show_icons = {
-	git = 0, 
-	folder = 0, 
-	files = 0 
+	git = 1,
+	folders = 1,
+	files = 1
 }
+
+vim.g.nvim_tree_add_trailing = 1;
+vim.g.nvim_tree_indent_markers = 1;
+
 require('nvim-tree').setup({
 		view = {
 			width = 35
-		}
+		},
 })
 
 vim.api.nvim_set_keymap('n', '<C-n>', ':NvimTreeToggle<CR>', {noremap=true})
+vim.api.nvim_set_keymap('r', '<C-r>', ':NvimTreeRefresh<CR>', {noremap=true})
 
 -- Add additional capabilities supported by nvim-cmp
 local capabilities = vim.lsp.protocol.make_client_capabilities()
